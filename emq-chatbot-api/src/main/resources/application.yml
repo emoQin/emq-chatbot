@@ -1,0 +1,21 @@
+server:
+  port: 8095
+spring:
+    application:
+      name: emq-chatbot
+    profiles:
+      active: dev
+
+logging:
+  config: classpath:logback-spring.xml
+  # 指定文件路径
+  file:
+    name: emo-chatbot
+    path: ./log/emo-chatbot
+  # 关闭自动装配日志报告
+  level:
+    org:
+      springframework:
+        boot:
+          autoconfigure:
+            logging: info
